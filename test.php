@@ -1,2 +1,3 @@
 <?php
-echo 'adas';
+
+print_r("Test.php: -> " . $_GET);
