@@ -8,27 +8,21 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form>
+				<form class="form-register" id="form-register">
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
 					</div>
 					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="Логин" aria-label="Логин" aria-describedby="basic-addon1">
+						<input type="text" id="needs_validate" data-title="Логин" name="login" class="form-control" placeholder="Логин" aria-label="Логин" aria-describedby="basic-addon1">
 					</div>
 					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="Пароль" aria-describedby="basic-addon1">
+						<input type="text" id="needs_validate" data-title="Пароль" name="password" class="form-control" placeholder="Пароль" aria-describedby="basic-addon1">
 					</div>
 				</form>
-				<div class="alert alert-danger" role="alert">
-  					Это основное уведомление — check it out!
-				</div>
-				<div class="alert alert-success" role="alert">
-  					Это основное уведомление — check it out!
-				</div>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
-				<button type="button" class="btn btn-primary">Зарегистрироваться</button>
+				<button type="submit" form="form-register" class="btn btn-primary">Зарегистрироваться</button>
 			</div>
 		</div>
 	</div>
