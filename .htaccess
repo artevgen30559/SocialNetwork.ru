@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /
+
+# Если страница не найдена, то показывает файл 404.php
+ErrorDocument 404 /404.php/
