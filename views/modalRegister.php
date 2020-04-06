@@ -8,7 +8,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form method="POST" action="models/Register.php" class="form_register" id="form-register">
+				<form method="POST" action="/models/Register.php" class="form_register" id="form-register">
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" name="name" placeholder="Имя пользователя" aria-label="Имя пользователя" aria-describedby="basic-addon1">
 					</div>

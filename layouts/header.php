@@ -20,9 +20,15 @@
 				<a class="nav-link disabled" href="#">Disabled</a>
 			</li>
 		</ul>
+		<?php if (!isset($_SESSION['id'])) { ?>
 		<div class="navbar-action">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authorizationModal" data-whatever="@mdo">Авторизация</button>
 			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#registerModal" data-whatever="@mdo">Регистрация</button>
 		</div>
+		<?php } else { ?>
+		<div class="navbar-action">
+			<button type="button" data-controller="/models/Logout.php" data-action="logout" class="btn btn-primary">Выход из аккаунта</button>
+		</div>
+		<?php } ?>
 	</div>
 </nav>

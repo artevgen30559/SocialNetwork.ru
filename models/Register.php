@@ -1,5 +1,6 @@
 <?php
-include('../config/db.php');
+session_start();
+include($_SERVER['DOCUMENT_ROOT'].'/config/db.php');
 
 $name 		= $_POST['name'];
 $login 		= $_POST['login'];

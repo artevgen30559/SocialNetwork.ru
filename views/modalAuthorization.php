@@ -8,7 +8,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form method="POST" action="models/Authorization.php" class="form_authorization" id="form_authorization">
+				<form method="POST" action="/models/Authorization.php" class="form_authorization" id="form_authorization">
 					<div class="input-group mb-3">
 						<input type="text" data-title="Логин" name="login" class="form-control" placeholder="Логин" aria-label="Логин" aria-describedby="basic-addon1">
 					</div>
