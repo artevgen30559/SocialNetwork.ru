@@ -12,3 +12,7 @@ $('button[type="button"]').on('click', function(e) {
 	e.preventDefault();
 	let handler_button_init = handler_button($(this));
 });
+
+$('.upload-avatar').change(function() {
+	$('#uploadAvatarModal').modal('toggle');
+});

@@ -10,14 +10,11 @@ $userIsExsist = false;
 
 $sql = "SELECT * FROM users WHERE login = :login";
 $stmt = $pdo->prepare($sql);
-$params = [
-	'login' => $login,
-];
-$stmt->execute($params);
+$stmt->execute(['login' => $login]);
 $result = $stmt->fetchAll();
 
-foreach ($result as $item) {
-	if (password_verify($password, $item['password'])) {
+foreach ($result as $user) {
+	if (password_verify($password, $user['password'])) {
 		$userIsExsist = true;
 		break;
 	}
@@ -33,7 +30,6 @@ if (!$userIsExsist) {
 	];
 	$result = $stmt->execute($params);
 	if ($result) {
-		$_SESSION['id'] = $item['id'];
 		echo json_encode([
 			'status' => 200,
 			'message' => 'User was created'

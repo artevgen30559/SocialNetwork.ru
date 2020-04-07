@@ -1,5 +1,12 @@
 <?php
-	include($_SERVER['DOCUMENT_ROOT'].'/models/Profile.php');
+	session_start();
+	include($_SERVER['DOCUMENT_ROOT'].'/config/GoogleConfig.php');
+	// Gooogle Authorization Link
+	$loginURL = $gClient->createAuthUrl();
+
+	if (isset($_SESSION['id'])) {
+		header("Location: /profile/".$_SESSION['id']);
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

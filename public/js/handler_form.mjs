@@ -3,6 +3,7 @@ import validation from './validation.mjs';
 
 import form_register from './form_register.mjs';
 import form_authorization from './form_authorization.mjs';
+import form_upload_avatar from './form_upload_avatar.mjs';
 
 export default function handler_form(form) {
 	let target_form_class 	= form.attr('class');

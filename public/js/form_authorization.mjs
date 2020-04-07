@@ -11,7 +11,7 @@ export default function form_authorization(data, form_class) {
 			break;
 		}
 		case 200: {
-			location.href = `/user/${data.id}`;
+			location.href = `/profile/${data.id}`;
 			break;
 		}
 	}

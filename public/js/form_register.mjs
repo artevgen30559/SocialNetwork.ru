@@ -11,7 +11,14 @@ export default function form_register(data, form_class) {
 			break;
 		}
 		case 200: {
-			location.href = '/';
+			$('#registerModal').modal('toggle');
+			setTimeout(function() {
+				$('body').append(`
+					<div class="alert alert-success" role="alert">
+						Регистрация прошла успешно! Теперь вы можете авторизоваться
+					</div>
+				`);
+			}, 100);
 			break;
 		}
 	}

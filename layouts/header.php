@@ -1,10 +1,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/views/modalRegister.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/views/modalAuthorization.php'); ?>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/views/modalAuthorization.php'); ?>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/config/GoogleConfig.php'); ?>
-<?php
-	$loginURL = $gClient->createAuthUrl();
-?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="#">NETwork</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +25,7 @@
 		<div class="navbar-action">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authorizationModal" data-whatever="@mdo">Авторизация</button>
 			<button type="button" class="btn btn-light" data-toggle="modal" data-target="#registerModal" data-whatever="@mdo">Регистрация</button>
-			<button type="button" class="btn btn-danger" name="button" onclick="window.location='<?php echo $loginURL; ?>'">Google</button>
+			<button type="button" class="btn btn-danger" name="button" onclick="window.location='<?php echo $loginURL; ?>'">Войти через Google</button>
 		</div>
 		<?php } else { ?>
 		<div class="navbar-action">

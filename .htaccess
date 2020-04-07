@@ -2,7 +2,7 @@ RewriteEngine on
 RewriteBase /
 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^user/([0-9]+) index.php?user=$1
+RewriteRule ^profile/([0-9]+) views/profile.php?user=$1
 
 
 # Если страница не найдена, то показывает файл 404.php
