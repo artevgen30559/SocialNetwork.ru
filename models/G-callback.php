@@ -15,19 +15,17 @@ if (isset($_GET['code'])) {
 	$result = $stmt->fetch();
 
 	if (empty($result)) {
-		$sql = "INSERT INTO users (login, password, name, surname, avatar, google_id) VALUES (:login, :password, :name, :surname, :avatar, :google_id)";
+		$sql = "INSERT INTO users (name, surname, avatar, google_id) VALUES (:name, :surname, :avatar, :google_id)";
 		$stmt = $pdo->prepare($sql);
 		$params = [
-			'login' => $token['access_token'],
-			'password' => $token['access_token'],
 			'name' => $google_account_info['givenName'],
 			'surname' => $google_account_info['familyName'],
 			'avatar' => $google_account_info['picture'],
-			'google_id' => $google_account_info['id']
+			'google_id' => 12312
 		];
 		$stmt->execute($params);
 	}
-
+	exit();
 	$_SESSION['id'] = $google_account_info['id'];
 	header('Location: /');
 }
