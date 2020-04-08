@@ -3,7 +3,7 @@ export default function dinamic_search(value) {
 	async function show_matches() {
 		let response = await fetch('/models/Search.php', {
 			method: 'POST',
-			body: value,
+			body: JSON.stringify(value),
 		});
 		let data = await response.json();
 		show_results(data);
@@ -13,9 +13,9 @@ export default function dinamic_search(value) {
 
 
 function show_results(data) {
-	if (data.length > 0) {
+	if (data.status == 200) {
 		$('.search_result a').remove();
-		for (let user of data) {
+		for (let user of data.matches) {
 			if (user.google_id != null) user.id = user.google_id;
 			$('.search_result').append(`
 				<a href="/profile/${user.id}" class="result_user_link list-group-item list-group-item-action">
@@ -32,4 +32,8 @@ function show_results(data) {
 	} else {
 		$('.search_result a').remove();
 	}
+	if (data.status == 404) {
+		$('.search_result a').remove();
+	}
+
 }

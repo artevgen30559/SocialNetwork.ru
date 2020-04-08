@@ -18,9 +18,7 @@ $('.upload-avatar').change(function() {
 	$('#uploadAvatarModal').modal('toggle');
 });
 
-$('.search').keyup(function(e) {
+$('.search_input').keyup(function(e) {
 	e.preventDefault();
-	if (/\w+/.test(e.key)) {
-		dinamic_search($(this).val());
-	}
+	dinamic_search($(this).val());
 });

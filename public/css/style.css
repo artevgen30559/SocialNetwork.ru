@@ -12,6 +12,9 @@
 
 .search_result {
 	margin-top: 15px;
+	position: absolute;
+	width: 100%;
+	z-index: 9999;
 }
 
 .search_result a:nth-child(even) {
@@ -25,7 +28,7 @@
 	justify-content: space-around;
 }
 
-.result_user_info .box {
+.box {
 	position: relative;
 	width: 80px;
 	height: 80px;
@@ -41,4 +44,16 @@
 	height: 100px;
 	transform: translate(-50%, -50%);
 	object-fit: cover;
+}
+
+
+.friend_info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 15px;
+}
+
+.friends_list {
+	margin-top: 20px;
 }
