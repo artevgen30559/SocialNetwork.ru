@@ -1,3 +1,4 @@
+<?php if ($_SESSION['id'] == $user_account_info['id'] || $_SESSION['id'] == $user_account_info['google_id']) {?>
 <form class="form_upload_avatar" id="form_upload_avatar" action="/models/UploadAvatar.php" method="POST" enctype="multipart/form-data">
 	<div class="custom-file">
 		<input type="file" class="custom-file-input upload-avatar" id="customFile" name="avatar">
@@ -21,3 +22,4 @@
 		</div>
 	</div>
 </div>
+<?php }?>

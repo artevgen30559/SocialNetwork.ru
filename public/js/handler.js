@@ -20,5 +20,7 @@ $('.upload-avatar').change(function() {
 
 $('.search').keyup(function(e) {
 	e.preventDefault();
-	dinamic_search($(this).val());
+	if (/\w+/.test(e.key)) {
+		dinamic_search($(this).val());
+	}
 });

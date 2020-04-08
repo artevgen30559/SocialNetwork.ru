@@ -33,11 +33,14 @@
 							</div>
 						</div>
 					</div>
+					<?php if ($_SESSION['id'] == $user_account_info['id'] || $_SESSION['id'] == $user_account_info['google_id']) {?>
 					<div class="col-8">
 						<form id="form_search_users" class="form_search_users" action="/models/Search.php" method="POST">
 							<input class="search form-control mr-sm-2" type="search" placeholder="Начните вводить пользователя..." aria-label="Search" name="search">
 						</form>
+						<div class="list-group search_result"></div>
 					</div>
+					<?php }?>
 				</div>
 			</div>
 		</section>

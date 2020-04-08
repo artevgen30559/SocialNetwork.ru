@@ -9,3 +9,36 @@
 .profile {
 	margin-top: 50px;
 }
+
+.search_result {
+	margin-top: 15px;
+}
+
+.search_result a:nth-child(even) {
+	background-color: #007BFF;
+	color: #fff;
+}
+
+.result_user_info {
+	text-align: center;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.result_user_info .box {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	border-radius: 1000px;
+}
+
+.result_user_info .box img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
