@@ -21,7 +21,7 @@ if (isset($_GET['code'])) {
 			'name' => $google_account_info['givenName'],
 			'surname' => $google_account_info['familyName'],
 			'avatar' => $google_account_info['picture'],
-			'google_id' => 12312
+			'google_id' => $google_account_info['id']
 		];
 		$stmt->execute($params);
 	}
