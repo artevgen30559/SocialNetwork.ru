@@ -16,7 +16,6 @@ function show_results(data) {
 	if (data.status == 200) {
 		$('.search_result a').remove();
 		for (let user of data.matches) {
-			if (user.google_id != null) user.id = user.google_id;
 			$('.search_result').append(`
 				<a href="/profile/${user.id}" class="result_user_link list-group-item list-group-item-action">
 					<div class="result_user_info d-flex">

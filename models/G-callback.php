@@ -25,7 +25,8 @@ if (isset($_GET['code'])) {
 		];
 		$stmt->execute($params);
 	}
-	exit();
-	$_SESSION['id'] = $google_account_info['id'];
+	$google_id = $google_account_info['id'];
+	$query = $pdo->query("SELECT users.id FROM users WHERE google_id = '$google_id'");
+	$_SESSION['id'] = $query->fetchColumn();
 	header('Location: /');
 }

@@ -21,7 +21,7 @@ if (empty($errors_field)) {
 	$avatar_directory = $_SERVER['DOCUMENT_ROOT'] . "/public/avatars/$generate_file_name";
 	move_uploaded_file($avatar['tmp_name'], $avatar_directory);
 
-	$sql = "UPDATE users SET avatar = :avatar WHERE id = :id OR google_id = :id";
+	$sql = "UPDATE users SET avatar = :avatar WHERE id = :id";
 	$stmt = $pdo->prepare($sql);
 	$avatar_localpath = "/public/avatars/$generate_file_name";
 	$stmt->execute(['avatar' => $avatar_localpath, 'id' => $_SESSION['id']]);

@@ -24,7 +24,7 @@
 									<li class="list-group-item">Город: <?php echo $user_account_info['city'];?></li>
 									<li class="list-group-item">Возраст: <?php echo $user_account_info['age'];?></li>
 								</ul>
-								<?php if ($_SESSION['id'] != $user_account_info['id'] && $_SESSION['id'] != $user_account_info['google_id']) {?>
+								<?php if ($_SESSION['id'] != $user_account_info['id']) {?>
 								<a href="#" data-sender="" data-receiver="" class="btn btn-primary">Добавить в друзья</a>
 								<a href="#" class="btn btn-primary">Написать сообщение</a>
 								<?php } else { ?>
@@ -33,7 +33,7 @@
 							</div>
 						</div>
 					</div>
-					<?php if ($_SESSION['id'] == $user_account_info['id'] || $_SESSION['id'] == $user_account_info['google_id']) {?>
+					<?php if ($_SESSION['id'] == $user_account_info['id']) {?>
 					<div class="col-8">
 						<div class="search">
 							<form id="form_search_users" class="form_search_users" action="/models/Search.php" method="POST">
