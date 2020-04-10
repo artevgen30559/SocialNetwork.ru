@@ -25,7 +25,15 @@
 .result_user_info {
 	text-align: center;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: between;
+}
+
+.result_user_info .box {
+	margin-right: 20px;
+}
+
+.result_user_info small {
+	margin-left: 20px;
 }
 
 .box {
@@ -33,27 +41,26 @@
 	width: 80px;
 	height: 80px;
 	overflow: hidden;
-	border-radius: 1000px;
+	border-radius: 10px;
 }
 
-.result_user_info .box img {
+.box img {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	transform: translate(-50%, -50%);
 	object-fit: cover;
 }
 
-
-.friend_info {
+.friend-list {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	padding: 0 15px;
+	justify-content: between;
+	flex-basis: 50%;
 }
 
-.friends_list {
-	margin-top: 20px;
+.friend-list img {
+	height: 100% !important;
 }

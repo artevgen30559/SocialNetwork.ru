@@ -25,7 +25,7 @@
 									<li class="list-group-item">Возраст: <?php echo $user_account_info['age'];?></li>
 								</ul>
 								<?php if ($_SESSION['id'] != $user_account_info['id']) {?>
-								<a href="#" data-sender="" data-receiver="" class="btn btn-primary">Добавить в друзья</a>
+								<a href="#" type="button" data-action="send_request" data-controller="/models/SendRequestFriend.php" data-button="<?php echo $_SESSION['id'];?>&<?php echo $user_account_info['id'];?>" class="friend_request btn btn-primary">Добавить в друзья</a>
 								<a href="#" class="btn btn-primary">Написать сообщение</a>
 								<?php } else { ?>
 									<a href="#" class="btn btn-primary">Перейти в диалоги</a>

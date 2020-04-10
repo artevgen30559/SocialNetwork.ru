@@ -9,7 +9,7 @@ $('form').submit(function(e) {
 	handler_form($(this));
 });
 
-$('button[type="button"]').on('click', function(e) {
+$('button[type="button"], a[type="button"]').on('click', function(e) {
 	e.preventDefault();
 	handler_button($(this));
 });
